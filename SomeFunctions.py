@@ -1,4 +1,4 @@
-
+""" we are trying to create a function just to play around the built in function of the python a bit"""
 
 #get the first letter of the word
 def first_letter(word):
@@ -23,5 +23,11 @@ def mid_letter(word):
         letter.append(x)
     print(letter.pop(length))
 
+#sort the letters of the word using alphabets from Aa- zZ
+def sort_letters(word):
+    letter = []
+    for x in word:
+        letter.append(x)
+    print(sorted(letter))
 
 
