@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f05c725-c509-43ba-b27c-10a130d50de3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DecisionLoop.py" afterPath="$PROJECT_DIR$/../DecisionLoop.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Dictionary.py" afterPath="$PROJECT_DIR$/../Dictionary.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Exercise.py" afterPath="$PROJECT_DIR$/../Exercise.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SomeFunctions.py" afterPath="$PROJECT_DIR$/../SomeFunctions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/lib/python3.4/site-packages/pip-8.1.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/env/lib/python3.4/site-packages/pip-8.1.1.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py" afterPath="$PROJECT_DIR$/env/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/lib/python3.4/site-packages/setuptools-20.9.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/env/lib/python3.4/site-packages/setuptools-20.9.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/lib/python3.4/site-packages/wheel-0.29.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/env/lib/python3.4/site-packages/wheel-0.29.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/lib/python3.4/site-packages/wheel/test/test_install.py" afterPath="$PROJECT_DIR$/env/lib/python3.4/site-packages/wheel/test/test_install.py" />
     </list>
     <ignored path="TangoWithDjango_V1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,6 +82,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="TangoWithDjango_V1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TangoWithDjango_V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TangoWithDjango_V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
