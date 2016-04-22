@@ -1,7 +1,4 @@
 
-
-
-
 """
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
 The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
@@ -9,33 +6,35 @@ The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 be
 
 #This problem will give an overview of the logical error while programming.
 
-#Number whose multiple we are going to add
-number = int(input("please enter a number\n"))
+
+number = int(input("please enter a number you want to divide\n"))  #Number whose multiple we are going to add
+
+multiplier = set() #Store the use given multipliers in a set
+result = set()     #Add all the numbers which produces 0 as remainder
+final_result = 0   #Holds sum of all the numbers from the set named result
+mul_cnt = True     #Counter to track the inputs from the user
+
+# Ask the user for the multipliers they want to use
+while mul_cnt == True:
+    x = int(input("Please enter the multipliers you want to use. Press 0 to end the input\n"))
+    if (x != 0):
+        multiplier.add(x)
+    else:
+        mul_cnt = False
+
+# Add all the multipliers to a single tuple called result
+for mul in multiplier:
+    for num in range(mul,number):
+        if(num % mul == 0):
+            result.add(num)
 
 
+# Add all the elements of the tuple to print the final result
+for items in result:
+    final_result = final_result + items
 
-#Number which the user's multiple
-multiplier1 = int(input("what is the first multiplier\n"))
-multiplier2 = int(input("what is the second multiplier\n"))
-
-
-result1 = set()
-final_result  = 0
+print("Answer: %s" %final_result)
 
 
-for i_1 in range(multiplier1, number):
-    if(i_1 % multiplier1 == 0):
-        result1.add(i_1)
-
-for i_2 in range(multiplier2, number):
-    if(i_2 % multiplier2 == 0):
-        result1.add(i_2)
-
-print(result1)
-
-for x in result1:
-    final_result   = final_result + x
-
-print(final_result)
 
 
