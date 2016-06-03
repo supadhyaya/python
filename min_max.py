@@ -1,3 +1,13 @@
+
+'''
+Implement the method iter_sample below to make the Unit test pass. iter_sample
+is supposed to peek at the first n elements of an iterator, and determine the
+minimum and maximum values (using their comparison operators) found in that
+sample. To make it more interesting, the method is supposed to return an
+iterator which will return the same exact elements that the original one would
+have yielded, i.e. the first n elements can't be missing.'''
+
+
 from itertools import count
 import unittest
 import itertools
