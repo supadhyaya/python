@@ -4,7 +4,7 @@ import itertools
 
 def iter_sample(ti, n):
 
-    chunk = list(ti)[:n]
+    #chunk = list(ti)[:n]
     ps = iter(ti)
     #chunk = list(ti)[:n]
     #it = iter(ti)
@@ -15,7 +15,7 @@ def iter_sample(ti, n):
     it = itertools.islice(to, n)
 
     dumb = itertools.chain(itertools.islice(to, n), ps)
-    dumb1 = ti
+    
 
 
     try:
