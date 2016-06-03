@@ -58,11 +58,11 @@ class StreamSampleTestCase(unittest.TestCase):
 		# now we now the global maximum!
 
 		it = iter(range(100))
-		min_val, max_val, new_it = iter_sample(it, 100)
+		min_val, max_val, new_it = iter_sample(it, 1000)
 
 		self.assertEqual(0, min_val)
 		self.assertEqual(99, max_val)
-		#self.assertEqual(list(range(100)), list(new_it))
+		self.assertEqual(list(range(100)), list(new_it))
 
 	def test_infinite_stream(self):
 
