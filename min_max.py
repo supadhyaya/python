@@ -7,36 +7,40 @@ sample. To make it more interesting, the method is supposed to return an
 iterator which will return the same exact elements that the original one would
 have yielded, i.e. the first n elements can't be missing.'''
 
-from itertools import count
 import unittest
 import itertools
+from itertools import count
 
-def iter_sample(ti, n):
 
-    it = itertools.islice(iter(ti),n)
 
+def iter_sample(it, n):
+    # change the input to iterables
+    iterable = iter(it)
+
+    # Fetch 2 variables initially for comparison
+    lowest = next(iterable)
+    highest = next(iterable)
+
+    # create an empty list to store the iterables previous state  and store the first two variables
     saved = []
+    saved.append(lowest)
+    saved.append(highest)
 
-    for i in it:
-        saved.append(i)
+    # Peek N-2 Elements from the iterables
+    for _ in range(n - 2 ):
+        try:
+            el = next(iterable)
+            if el < lowest:
+                lowest = el
+            if el > highest:
+                highest = el
+            saved.append(el)
+        except StopIteration:
+            return lowest, highest, itertools.chain(saved, iterable)
 
-    min_max = iter(saved)
+    # Return the lowest, highest and the iterable containing the full input set
+    return lowest, highest, itertools.chain(saved, iterable)
 
-    try:
-        lo = hi = next(min_max)
-    except StopIteration:
-        raise ValueError('minmax() arg is an empty sequence')
-
-    for x, y in (itertools.zip_longest(min_max, min_max, fillvalue=lo)):
-        if x > y:
-            x, y = y, x
-        if x < lo:
-            lo = x
-        if y > hi:
-            hi = y
-
-
-    return (lo,hi,itertools.chain(iter(saved), iter(ti)))
 
 
 class StreamSampleTestCase(unittest.TestCase):
