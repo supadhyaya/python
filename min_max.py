@@ -7,36 +7,27 @@ sample. To make it more interesting, the method is supposed to return an
 iterator which will return the same exact elements that the original one would
 have yielded, i.e. the first n elements can't be missing.'''
 
-
 from itertools import count
 import unittest
 import itertools
 
 def iter_sample(ti, n):
 
-    #chunk = list(ti)[:n]
-    ps = iter(ti)
-    #chunk = list(ti)[:n]
-    #it = iter(ti)
+    it = itertools.islice(iter(ti),n)
 
-    'Computes the minimum and maximum values in one-pass using only 1.5*len(data) comparisons'
-    to = iter(ti)
+    saved = []
 
-    it = itertools.islice(to, n)
+    for i in it:
+        saved.append(i)
 
-    dumb = itertools.chain(itertools.islice(to, n), ps)
-    
-
+    min_max = iter(saved)
 
     try:
-        lo = hi = next(it)
+        lo = hi = next(min_max)
     except StopIteration:
         raise ValueError('minmax() arg is an empty sequence')
 
-    for x, y in (itertools.zip_longest(it, it, fillvalue=lo)):
-
-        #saved.append = itertools.chain(itertools.islice(to, n), it)
-
+    for x, y in (itertools.zip_longest(min_max, min_max, fillvalue=lo)):
         if x > y:
             x, y = y, x
         if x < lo:
@@ -45,7 +36,7 @@ def iter_sample(ti, n):
             hi = y
 
 
-    return (lo,hi,dumb)
+    return (lo,hi,itertools.chain(iter(saved), iter(ti)))
 
 
 class StreamSampleTestCase(unittest.TestCase):
